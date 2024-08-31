@@ -1,0 +1,46 @@
+version: '3.7'
+
+services:
+  mariadb1:
+    image: mariadb:latest
+    container_name: mariadb1
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: edbertdb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
+    ports:
+      - "3306:3306"
+    networks:
+      - my_network
+    volumes:
+      - mariadb1_data:/var/lib/mysql
+      - ./mariadb1.cnf:/etc/mysql/conf.d/mariadb1.cnf
+      - ./mariadb1.sql:/docker-entrypoint-initdb.d/mariadb1.sql
+
+  mariadb2:
+    image: mariadb:latest
+    container_name: mariadb2
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: edbertdb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
+    ports:
+      - "3307:3306"
+    networks:
+      - my_network
+    volumes:
+      - mariadb2_data:/var/lib/mysql
+      - ./mariadb2.cnf:/etc/mysql/conf.d/mariadb2.cnf
+      - ./mariadb2.sql:/docker-entrypoint-initdb.d/mariadb2.sql
+
+volumes:
+  mariadb1_data:
+  mariadb2_data:
+
+networks:
+  my_network:
+    driver: bridge

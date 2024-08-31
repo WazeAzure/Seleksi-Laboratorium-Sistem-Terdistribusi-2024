@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS edbertdb;
+USE edbertdb;
+
+-- Buat pengguna untuk replikasi
+CREATE USER 'master2'@'%' IDENTIFIED BY 'master2';
+GRANT REPLICATION SLAVE ON *.* TO 'master2'@'%';
+FLUSH PRIVILEGES;
+
+CHANGE MASTER TO MASTER_HOST='mariadb1', MASTER_USER='master1', MASTER_PASSWORD='master1', MASTER_PORT=3306, MASTER_LOG_FILE='mysql-bin.000001', MASTER_LOG_POS=4;
+
+START SLAVE;

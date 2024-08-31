@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "*.mq5": "mq4",
+        "server.h": "c",
+        "unistd.h": "c",
+        "stdarg.h": "c",
+        "route.h": "c",
+        "threadpool.h": "c",
+        "queue.h": "c",
+        "httpserver.h": "c",
+        "jsonparser.h": "c",
+        "functional": "c",
+        "cstdlib": "c",
+        "algorithm": "c",
+        "stdlib.h": "c",
+        "string.h": "c"
+    }
+}

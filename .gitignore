@@ -1,2 +1,5 @@
 
 *.exe
+*.out
+10-Sister-js/peda*.txt
+/5-wolfman-sigma/tcmatmul

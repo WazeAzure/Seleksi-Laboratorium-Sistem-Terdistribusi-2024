@@ -1,0 +1,5 @@
+[mysqld]
+server-id=2
+log-bin=mysql-bin
+binlog-ignore-db=mysql
+replicate-ignore-db=mysql

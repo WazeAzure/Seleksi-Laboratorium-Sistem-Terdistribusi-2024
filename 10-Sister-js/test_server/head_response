@@ -1,0 +1,5 @@
+HTTP/1.1 200 OK
+GMT
+Server: Apache/2.2.14 (Win32)
+Content-Type: text/html
+Connection: Closed
