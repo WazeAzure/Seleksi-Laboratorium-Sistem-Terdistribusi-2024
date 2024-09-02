@@ -15,7 +15,7 @@ class API:
 
         self.totp = self.TOTP()
 
-        self.API = "http://sister21.tech:7787/recruitment/submit/a"
+        self.API = "http://sister21.tech:7787/recruitment/submit/b"
 
         # PAYLOADS
         self.payloads = {
