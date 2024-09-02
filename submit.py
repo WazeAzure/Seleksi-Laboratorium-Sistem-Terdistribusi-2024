@@ -9,8 +9,8 @@ class API:
     def __init__(self):
         # CONSTANTS
         self.full_name = "Edbert Eddyson Gunawan"
-        self.doc_url = "https://drive.google.com/file/d/1imYfu_E6koU_KdXpaV7xoE9d70ebNA80/view?usp=sharing" # <NIM>_<5 karakter pertama sha2-256 sum berkas>.pdf
-        self.message = 'hash generated using "sha256sum [file]" command. fc7eab919122d51232d53f48705db42c265b6a6f3a02d6b73e24fac2820ad101. honorable mentions: Wisyendra, Lydia, Flora, Qais (that gave me inspiration. g ada yg gw copast + ke map socially EHE :3)'
+        self.doc_url = "https://github.com/WazeAzure/Seleksi-Laboratorium-Sistem-Terdistribusi-2024" # <NIM>_<5 karakter pertama sha2-256 sum berkas>.pdf
+        self.message = 'cape coegg... lelah... ASEM... aarghh... keos... help me... -- v1.0'
         self.nim = "13522039"
 
         self.totp = self.TOTP()
