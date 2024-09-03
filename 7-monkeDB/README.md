@@ -1,5 +1,8 @@
 # Two Bidirectional Replication Database
 
+**YOUTUBE:** https://youtu.be/IuMFTWOJg2M
+
+---
 in this project, i used docker container to simulate 2 databases.
 
 there is `mariadbX.cnf` to make sure each database has different ID. As you can see, the server-id correspond to each db, the log-bin is for enabling binary log replication and specify base binary log file name. We want to ignore the mysql database since it contains user and other information. 
