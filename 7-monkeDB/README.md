@@ -37,6 +37,38 @@ if you want to remove then
 ```bash
 docker compose down -v
 ```
+connecting into the docker mariadb
+```bash
+docker exec -it (container_name) mysql -u root -proot
+```
+
+# Three Replication Database (1 Master 2 Slave)
+I Used docker to simulate the process with mariadb
+
+there is `mariadbX.cnf` to make sure each database has different ID. As you can see, the server-id correspond to each db, the log-bin is for enabling binary log replication and specify base binary log file name. We want to ignore the mysql database since it contains user and other information. 
+
+```
+# mariadb1 - Master
+[mysqld]
+server-id=1
+log-bin=mysql-bin
+binlog-ignore-db=mysql
+replicate-ignore-db=mysql
+```
+Furthermomre, i Added `read_only` attribute for the slave
+```
+# mariadb2 - mariadb3 - Slave
+[mysqld]
+server-id=2
+read_only = 1
+log-bin=mysql-bin
+binlog-ignore-db=mysql
+replicate-ignore-db=mysql
+```
+
+# Notes on how to run
+
+Make Sure that you set all `*.cnf` files permision to `644`. As long as you don't modify my file, it will persist!
 
 ---
 # Additional Information
