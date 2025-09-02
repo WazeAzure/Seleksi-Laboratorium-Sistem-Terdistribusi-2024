@@ -10,7 +10,7 @@ class API:
         # CONSTANTS
         self.full_name = "Edbert Eddyson Gunawan"
         self.doc_url = "https://github.com/WazeAzure/Seleksi-Laboratorium-Sistem-Terdistribusi-2024" # <NIM>_<5 karakter pertama sha2-256 sum berkas>.pdf
-        self.message = 'cape coegg... lelah... ASEM... aarghh... keos... help me... -- v1.0'
+        self.message = 'KEREN sudah semampunya, ditengah gempuran CTF dan SMT Korea -- v1.1'
         self.nim = "13522039"
 
         self.totp = self.TOTP()
